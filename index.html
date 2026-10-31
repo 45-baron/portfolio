@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <!-- ★ Tu modifies : data/profil.js, data/portfolio.js, data/articles.js, data/vitrine-liens-docs.js
+       Le reste (css/, js/) fait tourner le site tout seul. -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Amdane Tchakala · Routes, dessin & métré</title>
+  <meta name="description" content="Ingénieur génie civil : routes & VRD, dessin et projet, métré et étude de prix. Portfolio et outils Excel BTP.">
+  <meta property="og:title" content="Amdane Tchakala · Routes, dessin & métré">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#0E0E0E">
+  <!-- Sécurité : seul le code de ce site + Google Fonts est autorisé -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'none';">
+  <link rel="stylesheet" href="/css/variables.css">
+  <link rel="stylesheet" href="/css/base.css">
+  <link rel="stylesheet" href="/css/sections.css">
+  <link rel="stylesheet" href="/css/articles.css">
+  <link rel="stylesheet" href="/css/v3.css">
+</head>
+<body>
+  <!-- Logo BuildWise (discret) : réutilisé via <use> -->
+  <svg class="sym" aria-hidden="true"><symbol id="bw" viewBox="0 0 24 24"><path d="M3 3h18v18H3z" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M6.5 8l3 8 2.5-6 2.5 6 3-8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol></svg>
+  <div id="wipe" aria-hidden="true"></div>
+
+  <header class="bar">
+    <a href="/" data-r class="marque"><svg class="bw"><use href="#bw"/></svg><span>Amdane Tchakala</span></a>
+    <nav class="onglets" aria-label="Navigation">
+      <a href="/" data-r>Accueil</a>
+      <a href="/services" data-r>Services</a>
+      <a href="/realisations" data-r>Réalisations</a>
+      <a href="/parcours" data-r>Parcours</a>
+      <a href="/boutique" data-r>Boutique</a>
+      <a href="/recherche" data-r>Articles</a>
+      <a href="/contact" data-r class="cta">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ═════ ACCUEIL ═════ -->
+    <section class="vue sombre" id="v-accueil">
+      <div class="hero">
+        <div class="hero-txt">
+          <p class="kicker">Ingénieur génie civil</p>
+          <h1>Amdane<br>Tchakala</h1>
+          <p class="lead">Routes, dessin technique, métrés et études de prix.</p>
+          <div class="btns"><a href="/services" data-r class="btn j">Services</a><a href="/realisations" data-r class="btn l">Réalisations</a></div>
+        </div>
+        <figure class="affiche" id="affiche">
+          <svg viewBox="0 0 720 540" role="img" aria-label="Vue 3D d'un tracé routier avec profil en long">
+            <g id="route"></g>
+            <g class="leg"><path d="M28 36h22" class="rg"/><text x="60" y="40">Axe en plan</text><path d="M28 56h22" class="vt"/><text x="60" y="60">Profil en long</text><path d="M28 76h22" class="bl"/><text x="60" y="80">Bords de chaussée</text></g>
+            <g class="cart"><rect x="506" y="484" width="190" height="38"/><text x="518" y="500">DESSINÉ PAR</text><text x="518" y="514" class="b">BUILDWISE</text><use href="#bw" x="660" y="489" width="28" height="28"/></g>
+          </svg>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ═════ SERVICES ═════ -->
+    <section class="vue" id="v-services">
+      <div class="wrap">
+        <p class="kicker">Services</p><h2>Ce que je fais</h2>
+        <div class="split">
+          <div class="sl" id="sl">
+            <button class="on" data-s="0"><b>Routes</b><small>Tracé, profils, cubatures</small></button>
+            <button data-s="1"><b>Dessin technique</b><small>Plans, ferraillage</small></button>
+            <button data-s="2"><b>Métré et prix</b><small>Quantitatifs, devis</small></button>
+            <p class="mini">Je fais aussi du calcul de structure par éléments finis.</p>
+          </div>
+          <div class="detail">
+            <div class="pan on" data-s="0">
+              <p>Je traite les tracés de route : plan, profil en long, profils en travers et cubatures, sur AutoCAD et Civil 3D.</p>
+              <div class="visu"><svg viewBox="0 0 300 130" role="img" aria-label="Coupe de chaussée avec dévers"><path d="M30 92h240v12H30z" class="sol"/><g id="coupe"><path d="M30 84H270" class="rte"/><path d="M150 84V46" class="ax"/></g><text x="30" y="122">Coupe transversale</text></svg>
+              <label>Dévers e = <b id="e-val">6,0</b> %<input type="range" id="e-in" min="2" max="8" step="0.5" value="6"></label></div>
+            </div>
+            <div class="pan" data-s="1">
+              <p>Je prépare et je corrige les plans d'exécution : ouvrages hydrauliques, ferraillage, nomenclature des aciers, plans de bâtiments.</p>
+              <div class="visu"><svg viewBox="0 0 300 130" role="img" aria-label="Section de béton armé"><rect x="105" y="14" width="90" height="100" class="tr bl"/><rect x="113" y="22" width="74" height="84" class="tr rg d1"/><g class="barres"><circle cx="119" cy="28" r="3"/><circle cx="181" cy="28" r="3"/><circle cx="119" cy="100" r="3"/><circle cx="150" cy="100" r="3"/><circle cx="181" cy="100" r="3"/></g><path d="M105 124h90M105 120v8M195 120v8" class="tr bl d2"/><path d="M210 14v100M206 14h8M206 114h8" class="tr bl d2"/><text x="140" y="123" class="dim">b</text><text x="218" y="68" class="dim">h</text></svg></div>
+            </div>
+            <div class="pan" data-s="2">
+              <p>Je fais les métrés sur plan et sur site, les quantitatifs et les devis, avec des feuilles Excel automatisées.</p>
+              <div class="visu tab"><div><span>Béton</span><i></i></div><div><span>Acier</span><i></i></div><div><span>Coffrage</span><i></i></div><div><span>Terrassement</span><i></i></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═════ RÉALISATIONS ═════ -->
+    <section class="vue" id="v-realisations">
+      <div class="wrap"><p class="kicker">Réalisations</p><h2>Travaux réalisés</h2><div id="grille-real" class="g3"></div></div>
+    </section>
+
+    <!-- ═════ PARCOURS ═════ -->
+    <section class="vue" id="v-parcours">
+      <div class="wrap duo">
+        <div class="id">
+          <div class="photo" id="photo"><span>AT</span></div>
+          <h2 id="p-nom"></h2><p id="p-titre" class="mini"></p>
+          <div id="p-comp" class="chips"></div>
+        </div>
+        <div><p class="kicker">Parcours</p><div id="frise" class="frise"></div></div>
+      </div>
+    </section>
+
+    <!-- ═════ BOUTIQUE ═════ -->
+    <section class="vue sombre" id="v-boutique">
+      <div class="wrap">
+        <p class="kicker">Boutique</p><h2>Feuilles de calcul Excel</h2>
+        <div class="sw" id="sw"><button class="on" data-p="o">Feuilles Excel</button><button data-p="r">Ressources gratuites</button></div>
+        <div id="grille-outils" class="grille-outils" role="list"></div>
+        <div id="grille-ressources" class="grille-ressources" role="list"></div>
+        <p><a href="#" target="_blank" rel="noopener noreferrer" class="btn j" data-lien-chariow>Boutique Chariow</a></p>
+      </div>
+    </section>
+
+    <!-- ═════ ARTICLES ═════ -->
+    <section class="vue" id="v-recherche">
+      <div class="wrap"><p class="kicker">Articles</p><h2>Notes techniques</h2>
+        <div id="grille-articles" class="grille-articles" role="list"></div></div>
+    </section>
+
+    <!-- ═════ CONTACT ═════ -->
+    <section class="vue sombre" id="v-contact">
+      <div class="wrap"><p class="kicker">Contact</p><h2>Me contacter</h2>
+        <div class="g3 liens">
+          <a id="c-mail" href="#" class="lien"><small>Email</small><span></span></a>
+          <a id="c-wa" href="#" target="_blank" rel="noopener noreferrer" class="lien"><small>WhatsApp</small><span></span></a>
+          <a id="c-in" href="#" target="_blank" rel="noopener noreferrer" class="lien"><small>LinkedIn</small><span></span></a>
+        </div></div>
+    </section>
+  </main>
+
+  <footer class="pied"><span>© Amdane Tchakala</span><a href="/" data-r class="signe" aria-label="BuildWise"><svg class="bw"><use href="#bw"/></svg>BuildWise</a></footer>
+
+  <!-- Page article plein écran (remplie par js/vitrine-articles.js) -->
+  <div id="page-article" role="dialog" aria-modal="true" aria-label="Article">
+    <div class="page-article-nav"><button class="bouton-retour">← Retour</button><div class="page-article-progression"></div></div>
+    <div class="page-article-corps">
+      <div class="page-article-cat-txt page-article-cat"></div>
+      <h1 class="page-article-titre"></h1>
+      <div class="page-article-couverture-zone"></div>
+      <div class="page-article-meta">
+        <span><span class="meta-icone meta-icone--date"></span> <span class="page-article-date"></span></span>
+        <span><span class="meta-icone meta-icone--temps"></span> <span class="page-article-temps"></span></span>
+        <span><span class="meta-icone meta-icone--auteur"></span> <span class="page-article-auteur"></span></span>
+      </div>
+      <div class="contenu-article"></div>
+      <div class="article-tags"></div>
+    </div>
+  </div>
+
+  <script src="/js/securite.js"></script>
+  <script src="/js/icones.js"></script>
+  <script src="/data/profil.js"></script>
+  <script src="/data/portfolio.js"></script>
+  <script src="/data/articles.js"></script>
+  <script src="/data/vitrine-liens-docs.js"></script>
+  <script src="/js/vitrine-articles.js"></script>
+  <script src="/js/vitrine-fichiers.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

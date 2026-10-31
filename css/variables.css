@@ -1,0 +1,69 @@
+/* ═══════════════════════════════════════════════════════════════
+   variables.css
+   ─────────────────────────────────────────────────────────────
+   TOUTES les couleurs et polices du site sont définies ICI.
+   Pour changer l'ambiance du site entier → modifie ce fichier.
+   ═══════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* ── Couleurs neutres ──────────────────────────────────────
+     Blanc et noir légèrement chauds : plus confortables pour
+     l'œil qu'un blanc/noir pur, tout en restant très lisibles. */
+  --blanc:      #FAF9F6;
+  --blanc-pur:  #FFFFFF;
+  --noir:       #12130F;
+
+  --gris-05: #F4F2ED;
+  --gris-10: #ECE9E1;
+  --gris-20: #DFDACD;
+  --gris-40: #B9B2A0;
+  --gris-60: #8C8574;
+  --gris-80: #504A3D;
+
+  /* ── Vert (couleur principale) ─────────────────────────────
+     Croissance, fiabilité, ingénierie durable. Version affinée :
+     plus profonde et minérale que la précédente, moins "flashy". */
+  --vert-doux:  #DAE3D6;   /* fonds discrets */
+  --vert-moyen: #5C8B6C;   /* éléments secondaires */
+  --vert-fort:  #2E5E44;   /* CTA, liens actifs, titres accentués */
+  --vert-vif:   #2FBF82;   /* curseur, petits highlights ponctuels
+                               → utilisé avec parcimonie, jamais
+                                 en grand aplat */
+
+  /* ── Sable doré (couleur secondaire) ───────────────────────
+     Terre, minéral, chantier — vient équilibrer le vert sans
+     jamais rivaliser avec lui. Toujours en petite touche. */
+  --sable-clair: #F1E8D6;
+  --sable:       #C9A66B;
+  --sable-fonce: #8A6D3E;
+
+  /* ── Section sombre (services) ─────────────────────────────
+     Un noir-vert profond, cohérent avec la palette principale
+     plutôt qu'un noir neutre générique. */
+  --sombre-fond:    #0D1712;
+  --sombre-surface: #16241C;
+  --sombre-bordure: rgba(47,191,130,.14);
+
+  /* ── Typographies ───────────────────────────────────────────
+     Fraunces        → titres : caractère, prestige discret
+     Plus Jakarta Sans → corps de texte : lisibilité, modernité
+     IBM Plex Mono    → labels techniques, précision            */
+  --f-titre:  'Fraunces', Georgia, serif;
+  --f-corps:  'Plus Jakarta Sans', system-ui, sans-serif;
+  --f-mono:   'IBM Plex Mono', 'Courier New', monospace;
+
+  /* ── Espacements ────────────────────────────────────────────*/
+  --xl: 7rem;
+  --lg: 4rem;
+  --md: 2rem;
+  --sm: 1rem;
+
+  /* ── Rayons & ombres ────────────────────────────────────────*/
+  --rayon:  6px;
+  --rayon-lg: 14px;
+  --ombre-sm: 0 2px 14px rgba(18,19,15,.06);
+  --ombre-md: 0 8px 32px rgba(18,19,15,.10);
+  --ombre-lg: 0 16px 56px rgba(18,19,15,.14);
+}
